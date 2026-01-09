@@ -22,12 +22,12 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
   }, []);
 
   return (
-    <section className="min-h-screen px-8 max-sm:px-0 w-full flex justify-center ">
+    <section className="min-h-screen px-8 max-sm:px-0 w-full flex justify-center bg-gray-200 ">
       {heroSections.map((heroSection) => (
         <div key={heroSection.id} className="flex flex-col   w-full ">
           <Image
             src={isMobile ? heroSection.mobileImage : heroSection.desktopImage}
-            alt={heroSection.title}
+            alt="Seccion {heroSection.title}"
             width={1920}
             height={1080}
             className={isMobile ? "object-contain" : ""}
@@ -49,7 +49,7 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
                   >
                     <Image
                       src={producto.image}
-                      alt={producto.name}
+                      alt="Producto {producto.name}"
                       width={500}
                       height={500}
                       className="h-40 w-48 object-contain  "

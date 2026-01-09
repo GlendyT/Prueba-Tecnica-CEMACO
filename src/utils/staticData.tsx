@@ -27,6 +27,28 @@ interface HeroSection {
   bgColor: string;
 }
 
+interface FooterInfo {
+  id: number;
+  title: string;
+  links: {
+    id: number;
+    name: string;
+  }[];
+}
+
+interface BeforeFooterInfo {
+  id: number;
+  title: string;
+  image: string;
+}
+
+interface SocialMedia {
+  id: number;
+  name: string;
+  link: string;
+  icon: string;
+}
+
 export interface dataSectionsProps {
   heroSections: HeroSection[];
 }
@@ -113,7 +135,7 @@ export const Productos: Producto[] = [
   },
   {
     id: 5,
-    name: "Silla Egnonómica Café y Negra con Respaldo de Malla",
+    name: "Silla Ergonómica Café y Negra con Respaldo de Malla",
     price: 1349.1,
     discount: 10,
     regularPrice: 1499.0,
@@ -170,10 +192,167 @@ export const ChispasDeDulzura: HeroSection[] = [
 export const AuroraCosmica: HeroSection[] = [
   {
     id: 1,
-    title: "Chispas de Dulzura",
+    title: "Aurora Cosmica",
     desktopImage: "/2025oct-inspiracionNavidad-desk-00001.webp",
     mobileImage: "/2025oct-inspiracionNavidad-mob-00001.webp",
     productos: Productos,
     bgColor: "bg-[#3B87B2]",
+  },
+];
+
+export const beforeFooterInfo: BeforeFooterInfo[] = [
+  {
+    id: 1,
+    title: "Compras seguras",
+    image: "/2025-icono-tufelicidad-01.png",
+  },
+  {
+    id: 2,
+    title: "Entregas a todo el país",
+    image: "/2025-icono-tufelicidad-02.png",
+  },
+  {
+    id: 3,
+    title: "Envío gratis en compras arriba de Q250",
+    image: "/2025-icono-tufelicidad-03.png",
+  },
+  {
+    id: 4,
+    title: "Garantía Total",
+    image: "/202509-icono-tufelicidad-004a.png",
+  },
+];
+
+export const blueFooterInfo: BeforeFooterInfo[] = [
+  {
+    id: 1,
+    title: "Tiendas",
+    image: "/TiendasFooterNew.png",
+  },
+  {
+    id: 2,
+    title: "tusamigos@cemaco.com",
+    image: "/Correo-tusamigos-cemaco-comFooterNew.png",
+  },
+  {
+    id: 3,
+    title: "Compra por WhatsApp",
+    image: "/WhatsAppFooterNew.png",
+  },
+  {
+    id: 4,
+    title: "(502) 2499-9990",
+    image: "/ServicioFooterNew.png",
+  },
+  {
+    id: 5,
+    title: "Chat en linea",
+    image: "/FooterIconoChat.png",
+  },
+];
+
+export const footerInfo: FooterInfo[] = [
+  {
+    id: 1,
+    title: "Servicios",
+    links: [
+      {
+        id: 1,
+        name: "Instalaciones",
+      },
+      {
+        id: 2,
+        name: "Blog",
+      },
+      {
+        id: 3,
+        name: "Tiendas",
+      },
+      {
+        id: 4,
+        name: "Privilegio",
+      },
+      {
+        id: 5,
+        name: "Servicio a empresas",
+      },
+      {
+        id: 6,
+        name: "Bodas",
+      },
+      {
+        id: 7,
+        name: "Actividades",
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Nuestros valores",
+    links: [
+      { id: 1, name: "Sostenibilidad" },
+      { id: 2, name: "Garantía total" },
+      { id: 3, name: "Sistema B" },
+    ],
+  },
+  {
+    id: 3,
+    title: "Venta en línea",
+    links: [
+      { id: 1, name: "Retirar en tienda" },
+      { id: 2, name: "Métodos de pago" },
+      { id: 3, name: "Preguntas frecuentes" },
+      { id: 4, name: "Instalar CEMACO.com" },
+    ],
+  },
+  {
+    id: 4,
+    title: "Grupo CEMACO",
+    links: [
+      { id: 1, name: "Únete a nuestro equipo" },
+      { id: 2, name: "Sobre nosotros" },
+      { id: 3, name: "Deseas ser proveedor" },
+      { id: 4, name: "Jugeton" },
+      { id: 5, name: "Bebe Jugeton" },
+    ],
+  },
+];
+
+export const socialMedia: SocialMedia[] = [
+  {
+    id: 1,
+    name: "Tik Tok",
+    link: "https://www.tiktok.com/@cemacogt_oficial?_t=8nYaIo29LN8&_r=1",
+    icon: "/iconotiktokcemaco.png",
+  },
+  {
+    id: 2,
+    name: "Facebook",
+    link: "https://www.facebook.com/cemacogt",
+    icon: "/FacebookFooterNew.png",
+  },
+  {
+    id: 3,
+    name: "Instagram",
+    link: "https://www.instagram.com/cemacoguate/",
+    icon: "/InstagramFooterNew.png",
+  },
+  {
+    id: 4,
+    name: "X",
+    link: "https://x.com/cemaco_gt",
+    icon: "/b8069eb9-5d31-44dd-b231-14ffe2dd7fda___bb8e2c32bae0674ffffb81549a434de6.webp",
+  },
+  {
+    id: 5,
+    name: "YouTube",
+    link: "https://www.youtube.com/user/cemacogt",
+    icon: "/YouTubeFooterNew.png",
+  },
+  {
+    id: 6,
+    name: "Pinterest",
+    link: "https://www.pinterest.com.mx/cemacoguatemala/_created/",
+    icon: "/PinterestFooterNew.png",
   },
 ];
