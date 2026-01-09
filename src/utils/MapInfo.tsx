@@ -9,7 +9,7 @@ export const SocialMedia = () => {
         <Link key={item.id} href={item.link} rel="noopener" target="_blank">
           <Image
             src={item.icon}
-            alt={item.name}
+            alt="Logo de {item.name}"
             width={100}
             height={100}
             className="w-7 h-7"
@@ -49,7 +49,7 @@ export const CardsContainer = () => (
       >
         <Image
           src={cards.image}
-          alt={cards.title}
+          alt="Icono de{cards.title}"
           width={100}
           height={100}
           className="p-1 w-12"
@@ -58,4 +58,20 @@ export const CardsContainer = () => (
       </div>
     ))}
   </div>
+);
+
+export const SubscribeSection = () => (
+  <>
+    <input
+      type="email"
+      className="bg-white  rounded-full py-2 w-full border border-gray-400 outline-[#94d500] "
+      aria-label="ejemplo@correo.com "
+    />
+    <button
+      type="submit"
+      className="text-white bg-[#101E8D]  py-1 uppercase px-6 rounded-full text-sm font-semibold"
+    >
+      suscribirme
+    </button>
+  </>
 );

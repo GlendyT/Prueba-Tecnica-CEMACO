@@ -135,7 +135,7 @@ export const Productos: Producto[] = [
   },
   {
     id: 5,
-    name: "Silla Egnonómica Café y Negra con Respaldo de Malla",
+    name: "Silla Ergonómica Café y Negra con Respaldo de Malla",
     price: 1349.1,
     discount: 10,
     regularPrice: 1499.0,
@@ -192,7 +192,7 @@ export const ChispasDeDulzura: HeroSection[] = [
 export const AuroraCosmica: HeroSection[] = [
   {
     id: 1,
-    title: "Chispas de Dulzura",
+    title: "Aurora Cosmica",
     desktopImage: "/2025oct-inspiracionNavidad-desk-00001.webp",
     mobileImage: "/2025oct-inspiracionNavidad-mob-00001.webp",
     productos: Productos,
@@ -300,7 +300,7 @@ export const footerInfo: FooterInfo[] = [
     title: "Venta en línea",
     links: [
       { id: 1, name: "Retirar en tienda" },
-      { id: 2, name: "Metodos de pago" },
+      { id: 2, name: "Métodos de pago" },
       { id: 3, name: "Preguntas frecuentes" },
       { id: 4, name: "Instalar CEMACO.com" },
     ],
@@ -309,7 +309,7 @@ export const footerInfo: FooterInfo[] = [
     id: 4,
     title: "Grupo CEMACO",
     links: [
-      { id: 1, name: "Unete a nuestro equipo" },
+      { id: 1, name: "Únete a nuestro equipo" },
       { id: 2, name: "Sobre nosotros" },
       { id: 3, name: "Deseas ser proveedor" },
       { id: 4, name: "Jugeton" },

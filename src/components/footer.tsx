@@ -16,7 +16,12 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CardsContainer, FooterLinks, SocialMedia } from "../utils/MapInfo";
+import {
+  CardsContainer,
+  FooterLinks,
+  SocialMedia,
+  SubscribeSection,
+} from "../utils/MapInfo";
 
 const Footer = () => {
   return (
@@ -46,7 +51,7 @@ const Footer = () => {
                 <div className="flex flex-row gap-2 items-center border-2 border-gray-200 rounded-2xl px-4 py-2">
                   <Image
                     src={cards.image}
-                    alt={cards.title}
+                    alt="Logo de{cards.title}"
                     width={100}
                     height={100}
                     className="p-1 w-12"
@@ -66,16 +71,7 @@ const Footer = () => {
           </h1>{" "}
           <span>Recibe ofertas, beneficios y noticias</span>
           <div className="flex flex-row w-full justify-between gap-2 ">
-            <input
-              type="email"
-              className="bg-white  rounded-full py-2 w-full border border-gray-400 outline-[#94d500] "
-            />
-            <button
-              type="submit"
-              className="text-white bg-[#101E8D]  py-1 uppercase px-6 rounded-full text-sm font-semibold"
-            >
-              suscribirme
-            </button>
+            <SubscribeSection />
           </div>
         </div>
 
@@ -88,7 +84,7 @@ const Footer = () => {
             >
               <Image
                 src={contact.image}
-                alt={contact.title}
+                alt="Logo de{contact.title}"
                 width={100}
                 height={100}
                 className="w-6 h-6 "
@@ -187,16 +183,7 @@ const Footer = () => {
               </h1>{" "}
               <span>Recibe ofertas, beneficios y noticias</span>
               <div className="flex flex-row w-full justify-between gap-2 ">
-                <input
-                  type="email"
-                  className="bg-white  rounded-full py-2 w-full border border-gray-400 outline-[#94d500] "
-                />
-                <button
-                  type="submit"
-                  className="text-white bg-[#101E8D]  py-1 uppercase px-6 rounded-full text-sm font-semibold"
-                >
-                  suscribirme
-                </button>
+                <SubscribeSection />
               </div>
             </div>
           </div>
