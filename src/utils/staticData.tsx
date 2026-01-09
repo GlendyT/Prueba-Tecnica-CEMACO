@@ -199,7 +199,6 @@ export const AuroraCosmica: HeroSection[] = [
     bgColor: "bg-[#3B87B2]",
   },
 ];
-<<<<<<< HEAD
 
 export const beforeFooterInfo: BeforeFooterInfo[] = [
   {
@@ -357,5 +356,3 @@ export const socialMedia: SocialMedia[] = [
     icon: "/PinterestFooterNew.png",
   },
 ];
-=======
->>>>>>> 14fe909776243b3eec40651d845e959a5c98488b
