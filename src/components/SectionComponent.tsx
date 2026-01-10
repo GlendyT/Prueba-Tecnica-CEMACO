@@ -31,6 +31,8 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
             width={1920}
             height={1080}
             className={isMobile ? "object-contain" : ""}
+            fetchPriority="high"
+            loading="lazy"
           />
           <div
             className={` ${heroSection.bgColor} flex flex-row max-sm:flex-col w-full justify-between py-4 px-10 gap-4 max-sm:px-0 max-sm:py-10  `}
