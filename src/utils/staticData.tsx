@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { IoIosArrowDown } from "react-icons/io";
+import { ChevronDown } from "lucide-react";
 
 interface SubTabProps {
   id: number;
@@ -57,7 +57,7 @@ export const subtab: SubTabProps[] = [
   {
     id: 1,
     title: "Departamentos",
-    icon: <IoIosArrowDown size={24} />,
+    icon: <ChevronDown size={24} />,
   },
   {
     id: 2,
