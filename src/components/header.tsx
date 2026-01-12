@@ -22,11 +22,11 @@ const Header = () => {
         <h1 className=" font-semibold text-center text-sm">
           Todo para el regreso a clases a precios que te encantan.
           <br className="lg:hidden" />
-          <span className="underline text-xs">Ver mas</span>
+          <span className="underline text-xs cursor-pointer">Ver mas</span>
         </h1>
       </div>
       <div className="bg-white w-full flex flex-row h-10 items-center justify-between    ">
-        <div className="flex flex-row w-full">
+        <div className="flex flex-row w-auto justify-start">
           <Image
             src="/CemacoLogo.webp"
             alt="Cemaco Logo"
@@ -46,7 +46,6 @@ const Header = () => {
         </div>
 
         <SubtitlesHeader />
-
       </div>
       <header
         className={`bg-[#101e8d] w-full   h-auto px-6 max-lg:px-2 py-4 flex flex-col gap-2  text-white
@@ -59,7 +58,7 @@ const Header = () => {
               <div className="flex flex-row items-center justify-center gap-2 ">
                 <Menu className="cursor-pointer 2xl:hidden  " />
                 <Image
-                  src="/logoCortoMobile.png"
+                  src="/logoCortoMobile.webp"
                   alt="Cemaco logo corto"
                   width={100}
                   height={100}
@@ -115,6 +114,7 @@ const Header = () => {
                 </h1>
               </div>
               <ShoppingCart size={24} className="cursor-pointer" />
+              <div className=" bg-[#94d500] absolute p-1 top-6  rounded-full" />
             </div>
           </div>
           <div

@@ -97,10 +97,10 @@ export const SearchBar = () => (
 );
 
 export const SubtitlesHeader = () => (
-  <div className="flex flex-row w-full pr-8 justify-end max-sm:px-0 gap-4 max-sm:gap-1   ">
+  <div className="flex flex-row w-full pr-8 justify-end gap-8 max-sm:px-0  max-sm:gap-1   ">
     {subtitles.map((item) => (
       <h1
-        className="text-gray-500  max-sm:text-xs cursor-pointer sm:line-clamp-1 "
+        className="text-gray-500  text-xs cursor-pointer max-sm:line-clamp-1  "
         key={item.id}
       >
         {item.title}

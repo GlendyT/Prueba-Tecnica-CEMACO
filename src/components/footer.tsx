@@ -44,11 +44,11 @@ const Footer = () => {
         {/* Desktop - grid sin scroll */}
         <CardsContainer />
         {/* Mobile - carousel */}
-        <Carousel className="sm:hidden px-2">
-          <CarouselContent>
+        <Carousel className="sm:hidden px-2  ">
+          <CarouselContent className="mb-1">
             {beforeFooterInfo.map((cards) => (
-              <CarouselItem key={cards.id} className="basis-72">
-                <div className="flex flex-row gap-2 items-center border-2 border-gray-200 rounded-2xl px-4 py-2">
+              <CarouselItem key={cards.id} className="basis-72  ">
+                <div className="flex flex-row gap-2 items-center h-full border-2 border-gray-200 rounded-2xl px-4 py-2 ">
                   <Image
                     src={cards.image}
                     alt="Logo de{cards.title}"
@@ -80,7 +80,7 @@ const Footer = () => {
           {blueFooterInfo.map((contact) => (
             <span
               key={contact.id}
-              className="flex flex-row gap-2 items-center justify-center w-ful max-sm:text-start max-sm:gap-4"
+              className="flex flex-row gap-2 items-center justify-center  max-sm:text-start max-sm:gap-4"
             >
               <Image
                 src={contact.image}
