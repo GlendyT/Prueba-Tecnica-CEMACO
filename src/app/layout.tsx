@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title: "Prueba Tecnica CEMACO",
   description: "Prueba Tecnica CEMACO",
   icons: {
-    icon: "/logoCortoMobile.png",
+    icon: "/logoCortoMobile.webp",
   },
 };
 

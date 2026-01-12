@@ -32,6 +32,7 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
             height={1080}
             className={isMobile ? "object-contain" : ""}
             fetchPriority="high"
+            loading="lazy"
             
           />
           <div
