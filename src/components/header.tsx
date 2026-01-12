@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import { Search, ShoppingCart, ChevronDown, Menu } from "lucide-react";
+import { ShoppingCart, ChevronDown, Menu } from "lucide-react";
 import { subtab, subtitles } from "../utils/staticData";
 import { useEffect, useState } from "react";
-import { SearchBar } from "../utils/MapInfo";
+import { SearchBar, SubtitlesHeader } from "../utils/MapInfo";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -21,73 +21,77 @@ const Header = () => {
       <div className="bg-gray-100 w-full  ">
         <h1 className=" font-semibold text-center text-sm">
           Todo para el regreso a clases a precios que te encantan.
-          <br />
-          <span className="underline text-xs">Ver mas</span>
+          <br className="lg:hidden" />
+          <span className="underline text-xs cursor-pointer">Ver mas</span>
         </h1>
       </div>
-      <div className="bg-white w-full flex flex-row h-10   ">
-        <Image
-          src="/CemacoLogo.webp"
-          alt="Cemaco Logo"
-          width={150}
-          height={150}
-          className=" w-24 p-3 bg-[#101e8d] rounded-t-sm cursor-pointer "
-        />
+      <div className="bg-white w-full flex flex-row h-10 items-center justify-between    ">
+        <div className="flex flex-row w-auto justify-start">
+          <Image
+            src="/CemacoLogo.webp"
+            alt="Cemaco Logo"
+            width={150}
+            height={150}
+            className=" w-24 object-contain px-3 py-2 bg-[#101e8d] rounded-t-sm cursor-pointer "
+          />
 
-        <Image
-          src="/juguetonLogoOficial.webp"
-          alt="Cemaco Logo"
-          width={200}
-          height={200}
-          className=" w-24 p-1 bg-gray-50 rounded-t-sm cursor-pointer  "
-          style={{ boxShadow: " 0px 4px 6px rgba(0, 0, 0, 0.5)" }}
-        />
-
-        <div className="flex flex-row w-full justify-center gap-4 items-center  ">
-          {subtitles.map((item) => (
-            <h1
-              className="text-gray-500 max-sm:text-xs cursor-pointer "
-              key={item.id}
-            >
-              {item.title}
-            </h1>
-          ))}
+          <Image
+            src="/juguetonLogoOficial.webp"
+            alt="Cemaco Logo"
+            width={200}
+            height={200}
+            className=" w-24 object-contain p-1 bg-gray-50 rounded-t-sm cursor-pointer  "
+            style={{ boxShadow: " 0px 4px 6px rgba(0, 0, 0, 0.5)" }}
+          />
         </div>
+
+        <SubtitlesHeader />
       </div>
       <header
-        className={`bg-[#101e8d] w-full  h-auto px-6 max-lg:px-2 py-4 flex flex-col gap-2 text-white
+        className={`bg-[#101e8d] w-full   h-auto px-6 max-lg:px-2 py-4 flex flex-col gap-2  text-white
           ${isScrolled ? "fixed top-0 left-0 z-50  shadow-lg " : "relative "}
           `}
       >
-        <div className="flex flex-row max-lg:flex-col  gap-12 max-lg:gap-2 max-sm:justify-between items-center justify-center ">
-          <div className="flex flex-row w-full gap-10 justify-between">
-            <div className="flex flex-row gap-2 items-center justify-center">
-              {isScrolled ? (
+        <div className="flex flex-row max-lg:flex-col w-full gap-4 items-center justify-between ">
+          <div className="flex flex-row max-lg:flex-row gap-8 max-sm:gap-2 w-full items-center justify-between">
+            {isScrolled ? (
+              <div className="flex flex-row items-center justify-center gap-2 ">
+                <Menu className="cursor-pointer 2xl:hidden  " />
                 <Image
-                  src="/logoCortoMobile.png"
+                  src="/logoCortoMobile.webp"
                   alt="Cemaco logo corto"
                   width={100}
                   height={100}
-                  className="w-6 h-6"
+                  className="w-6 max-lg:hidden "
                 />
-              ) : (
-                ""
-              )}
-              <Menu className="cursor-pointer sm:hidden " />
-              {!isScrolled && (
+                <h1 className="cursor-pointer max-sm:text-xs flex flex-row gap-2 max-lg:hidden ">
+                  Departamentos
+                  <ChevronDown size={24} />
+                </h1>
+                <h1 className="xl:hidden  ">Menu</h1>
+              </div>
+            ) : (
+              <div className="flex flex-row items-center justify-center gap-1">
+                <Menu className="cursor-pointer xl:hidden  " />
                 <Image
                   src="/CemacoLogo.webp"
                   alt="Cemaco Logo"
                   width={150}
                   height={150}
-                  className={` w-44 h-auto max-sm:w-24 max-sm:h-6`}
+                  className={` w-44 object-contain h-auto max-sm:w-auto max-sm:h-auto  `}
                 />
-              )}
+              </div>
+            )}
+
+            <div
+              className={`w-full flex flex-row items-center justify-center  bg-white rounded-full px-4 py-2  ${
+                isScrolled ? "" : "max-lg:hidden"
+              } `}
+            >
+              <SearchBar />
             </div>
 
-            <SearchBar isScrolled={!isScrolled} hidden="none" />
-
-            <div className="w-auto flex flex-row items-center gap-2 max-sm:gap-2">
+            <div className="w-auto flex flex-row items-center justify-end gap-2 max-sm:gap-2">
               <div className="flex flex-row w-40 gap-2 max-sm:w-auto items-center justify-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -104,17 +108,22 @@ const Header = () => {
                     transform="translate(-538.593 116.855)"
                   ></path>
                 </svg>
-                <h1 className="cursor-pointer max-sm:text-xs">
+                <h1 className="cursor-pointer max-sm:text-xs flex flex-row gap-2">
                   Iniciar sesión
+                  <ChevronDown size={24} className="max-sm:hidden" />
                 </h1>
-                <ChevronDown size={24} className="max-sm:hidden" />
               </div>
               <ShoppingCart size={24} className="cursor-pointer" />
+              <div className=" bg-[#94d500] absolute p-1 top-6  rounded-full" />
             </div>
           </div>
-
-          {/* SEARCH MOBILE */}
-          <SearchBar isScrolled={isScrolled} hidden="hidden" />
+          <div
+            className={`w-full flex flex-row items-center justify-center  bg-white rounded-full px-4 py-2 xl:hidden md:hidden ${
+              isScrolled ? "hidden" : ""
+            }   `}
+          >
+            <SearchBar />
+          </div>
         </div>
 
         {/* SUB TAB */}
@@ -127,7 +136,7 @@ const Header = () => {
             {subtab.map((item) => (
               <h1
                 key={item.id}
-                className="flex flex-row gap-1 items-center justify-center"
+                className="flex flex-row gap-1 items-center justify-center font-semibold"
               >
                 {item.title}
                 <span>{item.icon}</span>
@@ -141,6 +150,7 @@ const Header = () => {
                 alt="Entrega rapida"
                 width={40}
                 height={40}
+                className="object-contain"
               />
               Entrega rápida
             </h1>
@@ -150,6 +160,7 @@ const Header = () => {
                 alt="Entrega rapida"
                 width={40}
                 height={40}
+                className="object-contain"
               />
               Retira en tiendas
             </h1>

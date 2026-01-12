@@ -1,5 +1,10 @@
 import Link from "next/link";
-import { beforeFooterInfo, footerInfo, socialMedia } from "./staticData";
+import {
+  beforeFooterInfo,
+  footerInfo,
+  socialMedia,
+  subtitles,
+} from "./staticData";
 import Image from "next/image";
 import { Search } from "lucide-react";
 
@@ -77,16 +82,8 @@ export const SubscribeSection = () => (
   </>
 );
 
-export const SearchBar = ({
-  isScrolled,
-  hidden,
-}: {
-  isScrolled: boolean;
-  hidden: string;
-}) => (
-  <div
-    className={`w-full flex flex-row items-center justify-center  bg-white rounded-full px-4 py-2  ${isScrolled} ${hidden }`}
-  >
+export const SearchBar = () => (
+  <>
     <input
       type="text"
       placeholder="Buscar"
@@ -96,5 +93,18 @@ export const SearchBar = ({
       className={`text-[#101e8d] bg-[#94d500] p-1 rounded-full cursor-pointer `}
       size={24}
     />
+  </>
+);
+
+export const SubtitlesHeader = () => (
+  <div className="flex flex-row w-full pr-8 justify-end gap-8 max-sm:px-0  max-sm:gap-1   ">
+    {subtitles.map((item) => (
+      <h1
+        className="text-gray-500  text-xs cursor-pointer max-sm:line-clamp-1  "
+        key={item.id}
+      >
+        {item.title}
+      </h1>
+    ))}
   </div>
 );

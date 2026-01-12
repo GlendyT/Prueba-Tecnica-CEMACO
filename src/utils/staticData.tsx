@@ -76,19 +76,23 @@ export const subtab: SubTabProps[] = [
 export const subtitles: SubTabProps[] = [
   {
     id: 1,
-    title: "Cocina y mesas",
+    title: "Productos con suscripción",
   },
   {
     id: 2,
-    title: "Muebles",
+    title: "¿Eres empresa?",
   },
   {
     id: 3,
-    title: "Patio y jardín",
+    title: "Tiendas",
   },
   {
     id: 4,
-    title: "Todo en ferretería ",
+    title: "Compra x chat ",
+  },
+  {
+    id: 5,
+    title: "Compra x WhatsApp ",
   },
 ];
 
@@ -354,5 +358,17 @@ export const socialMedia: SocialMedia[] = [
     name: "Pinterest",
     link: "https://www.pinterest.com.mx/cemacoguatemala/_created/",
     icon: "/PinterestFooterNew.png",
+  },
+];
+
+export const Departamentos = [
+  {
+    id: 1,
+    title: "Departamentos",
+    links: [
+      { id: 1, name: "Cocina y mesa" },
+      { id: 2, name: "Muebles" },
+      { id: 3, name: "Patio y jardín" },
+    ],
   },
 ];

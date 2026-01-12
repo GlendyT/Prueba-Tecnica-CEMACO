@@ -1,16 +1,12 @@
-
 import type { Metadata } from "next";
-import { Geist, } from "next/font/google";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Prueba Tecnica CEMACO",
   description: "Prueba Tecnica CEMACO",
+  icons: {
+    icon: "/logoCortoMobile.png",
+  },
 };
 
 export default function RootLayout({
@@ -19,11 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} antialiased`}
-        suppressHydrationWarning
-      >
+    <html
+      lang="en"
+      suppressHydrationWarning
+    >
+      <body className={` antialiased`} suppressHydrationWarning>
         {children}
       </body>
     </html>
