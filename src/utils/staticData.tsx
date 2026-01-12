@@ -25,6 +25,8 @@ interface HeroSection {
   mobileImage: string;
   productos: Producto[];
   bgColor: string;
+  loading?: "lazy" | null;
+  fetchPriority?: "high" | "low" | "auto";
 }
 
 interface FooterInfo {
@@ -157,6 +159,7 @@ export const HistoriasDeNavidad: HeroSection[] = [
     mobileImage: "/2025oct-inspiracionNavidad-mob-00005.webp",
     productos: Productos,
     bgColor: "bg-[#C02026]",
+    fetchPriority: "high",
   },
 ];
 
@@ -168,6 +171,8 @@ export const GalaFloral: HeroSection[] = [
     mobileImage: "/2025oct-inspiracionNavidad-mob-00002.webp",
     productos: Productos,
     bgColor: "bg-[#9C6F9B]",
+    loading: "lazy",
+    fetchPriority: "low",
   },
 ];
 
@@ -179,6 +184,8 @@ export const BosqueMagico: HeroSection[] = [
     mobileImage: "/2025oct-inspiracionNavidad-mob-00003.webp",
     productos: Productos,
     bgColor: "bg-[#334D23]",
+    loading: "lazy",
+    fetchPriority: "low",
   },
 ];
 
@@ -190,6 +197,8 @@ export const ChispasDeDulzura: HeroSection[] = [
     mobileImage: "/2025oct-inspiracionNavidad-mob-00004.webp",
     productos: Productos,
     bgColor: "bg-[#E67BAD]",
+    loading: "lazy",
+    fetchPriority: "low",
   },
 ];
 
@@ -201,6 +210,8 @@ export const AuroraCosmica: HeroSection[] = [
     mobileImage: "/2025oct-inspiracionNavidad-mob-00001.webp",
     productos: Productos,
     bgColor: "bg-[#3B87B2]",
+    loading: "lazy",
+    fetchPriority: "low",
   },
 ];
 

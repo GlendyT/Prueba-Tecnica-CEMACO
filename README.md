@@ -1,5 +1,89 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Dependencies
+
+### Production Dependencies
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| next | 16.1.1 | React framework for production |
+| react | 19.2.3 | JavaScript library for building user interfaces |
+| react-dom | 19.2.3 | React package for working with the DOM |
+| @radix-ui/react-accordion | ^1.2.12 | Accessible accordion component |
+| @radix-ui/react-slot | ^1.2.4 | Radix UI slot component |
+| class-variance-authority | ^0.7.1 | Utility for creating type-safe CSS class variants |
+| clsx | ^2.1.1 | Utility for constructing className strings |
+| embla-carousel-react | ^8.6.0 | React carousel component |
+| lucide-react | ^0.562.0 | Beautiful & consistent icon toolkit |
+| tailwind-merge | ^3.4.0 | Utility function to merge Tailwind CSS classes |
+
+### Development Dependencies
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| typescript | ^5 | TypeScript language support |
+| tailwindcss | ^4 | Utility-first CSS framework |
+| @tailwindcss/postcss | ^4 | PostCSS plugin for Tailwind CSS |
+| eslint | ^9 | JavaScript linter |
+| eslint-config-next | 16.1.1 | ESLint configuration for Next.js |
+| @types/node | ^20 | TypeScript definitions for Node.js |
+| @types/react | ^19 | TypeScript definitions for React |
+| @types/react-dom | ^19 | TypeScript definitions for React DOM |
+| tw-animate-css | ^1.4.0 | Tailwind CSS animation utilities |
+
+## Performance
+
+🚀 **Live Performance Analysis**: [PageSpeed Insights](https://pagespeed.web.dev/analysis/https-prueba-tecnica-cemaco-netlify-app/6jbiek0s6j?form_factor=mobile)
+
+## Architecture & SOLID Principles
+
+### SOLID Principles Applied
+
+- **Single Responsibility Principle (SRP)**: Cada componente tiene una responsabilidad específica:
+  - `SectionComponent.tsx`: Maneja únicamente la renderización de secciones de productos
+  - `formatters.ts`: Se encarga exclusivamente del formateo de precios
+  - `staticData.tsx`: Contiene únicamente la definición de datos estáticos y tipos
+
+- **Open/Closed Principle (OCP)**: Los componentes están abiertos para extensión pero cerrados para modificación:
+  - Componentes UI reutilizables en `/components/ui/`
+  - Interfaces TypeScript bien definidas para extensibilidad
+
+- **Interface Segregation Principle (ISP)**: Interfaces específicas y cohesivas:
+  - `dataSectionsProps`, `Producto`, `HeroSection` - cada una con propósito específico
+  - Componentes reciben solo las props que necesitan
+
+- **Dependency Inversion Principle (DIP)**: Dependencias abstraídas:
+  - Uso de props tipadas en lugar de dependencias directas
+  - Separación de lógica de presentación y datos
+
+### Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── sections/          # Secciones específicas de la aplicación
+│   ├── globals.css        # Estilos globales
+│   ├── layout.tsx         # Layout principal
+│   └── page.tsx           # Página principal
+├── components/            # Componentes reutilizables
+│   ├── footer.tsx         # Componente del footer
+│   ├── header.tsx         # Componente del header
+│   └── SectionComponent.tsx # Componente de secciones de productos
+└── utils/                 # Utilidades y helpers
+    ├── formatters.ts      # Funciones de formateo
+    ├── MapInfo.tsx        # Información de mapas
+    └── staticData.tsx     # Datos estáticos y tipos TypeScript
+
+components/ui/             # Componentes UI base (Radix UI + shadcn/ui)
+├── accordion.tsx          # Componente acordeón
+├── button.tsx             # Componente botón
+├── card.tsx               # Componente tarjeta
+└── carousel.tsx           # Componente carrusel
+
+public/                    # Assets estáticos
+└── [images]               # Imágenes optimizadas (.webp, .png)
+```
+
 ## Getting Started
 
 First, run the development server:
@@ -29,8 +113,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deploy on Netlify
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The easiest way to deploy your Next.js app is to use the [Netlify Platform](https://www.netlify.com/) which provides seamless integration with Git repositories.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+🌐 **Live Demo**: [https://prueba-tecnica-cemaco.netlify.app/](https://prueba-tecnica-cemaco.netlify.app/)

@@ -1,4 +1,4 @@
-import React from "react";
+
 import {
   beforeFooterInfo,
   blueFooterInfo,
@@ -166,7 +166,7 @@ const Footer = () => {
               </div>
 
               <Image
-                src="/feedback.png"
+                src="/feedback.webp"
                 alt="Opiniones certificadas"
                 width={100}
                 height={100}
