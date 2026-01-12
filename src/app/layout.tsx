@@ -11,6 +11,9 @@ const geistSans = Geist({
 export const metadata: Metadata = {
   title: "Prueba Tecnica CEMACO",
   description: "Prueba Tecnica CEMACO",
+  icons: {
+    icon: "/logoCortoMobile.png",
+  },
 };
 
 export default function RootLayout({

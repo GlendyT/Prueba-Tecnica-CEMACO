@@ -356,3 +356,15 @@ export const socialMedia: SocialMedia[] = [
     icon: "/PinterestFooterNew.png",
   },
 ];
+
+export const Departamentos = [
+  {
+    id: 1,
+    title: "Departamentos",
+    links: [
+      { id: 1, name: "Cocina y mesa" },
+      { id: 2, name: "Muebles" },
+      { id: 3, name: "Patio y jardín" },
+    ],
+  },
+];

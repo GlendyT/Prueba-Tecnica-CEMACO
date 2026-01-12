@@ -17,8 +17,8 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
   useEffect(() => {
     const checkScreenSize = () => setIsMobile(window.innerWidth < 640);
     checkScreenSize();
-    window.addEventListener('resize', checkScreenSize);
-    return () => window.removeEventListener('resize', checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+    return () => window.removeEventListener("resize", checkScreenSize);
   }, []);
 
   return (
@@ -47,7 +47,7 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
                 {heroSection.productos.map((producto) => (
                   <CarouselItem
                     key={producto.id}
-                    className="md:basis-96 lg:basis-48 max-sm:basis-44 bg-white  flex flex-col items-center justify-center px-1 pt-1 pb-4  "
+                    className="md:basis-56 lg:basis-48 sm:basis-44 max-sm:basis-44 bg-white  flex flex-col items-center justify-center px-1 pt-1 pb-4  "
                   >
                     <Image
                       src={producto.image}
