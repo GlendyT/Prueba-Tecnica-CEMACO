@@ -28,6 +28,7 @@ const Header = () => {
       <div className="bg-white w-full flex flex-row h-10 items-center justify-between    ">
         <div className="flex flex-row w-auto justify-start">
           <Image
+            priority
             src="/CemacoLogo.webp"
             alt="Cemaco Logo"
             width={150}
@@ -36,6 +37,7 @@ const Header = () => {
           />
 
           <Image
+            priority
             src="/juguetonLogoOficial.webp"
             alt="Cemaco Logo"
             width={200}
@@ -58,6 +60,7 @@ const Header = () => {
               <div className="flex flex-row items-center justify-center gap-2 ">
                 <Menu className="cursor-pointer 2xl:hidden  " />
                 <Image
+                priority
                   src="/logoCortoMobile.webp"
                   alt="Cemaco logo corto"
                   width={100}
@@ -74,6 +77,7 @@ const Header = () => {
               <div className="flex flex-row items-center justify-center gap-1">
                 <Menu className="cursor-pointer xl:hidden  " />
                 <Image
+                priority
                   src="/CemacoLogo.webp"
                   alt="Cemaco Logo"
                   width={150}

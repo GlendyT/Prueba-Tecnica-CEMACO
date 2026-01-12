@@ -27,7 +27,7 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
         <div key={heroSection.id} className="flex flex-col   w-full ">
           <Image
             src={isMobile ? heroSection.mobileImage : heroSection.desktopImage}
-            alt="Seccion {heroSection.title}"
+            alt={`Seccion ${heroSection.title}`}
             width={1920}
             height={1080}
             className={isMobile ? "object-contain" : ""}
@@ -49,7 +49,7 @@ const SectionComponent = ({ heroSections }: dataSectionsProps) => {
                   >
                     <Image
                       src={producto.image}
-                      alt="Producto {producto.name}"
+                      alt={`Producto ${producto.name}`}
                       width={500}
                       height={500}
                       className="h-40 w-48 object-contain  "
